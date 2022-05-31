@@ -53,7 +53,7 @@ button{
   margin: 0;
   text-transform: uppercase;
 }
-.task-section__add-form {
+.tasks-section__add-form {
   padding: 20px 0 1em;
 }
 .task__label {
