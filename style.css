@@ -3,31 +3,39 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style: none;
 }
+
 input,
 button{
   outline: none;
 }
+
 /* Basic Style */
+
 .page {
   background-color: #f8f8f8;
   color: #333;
-  font-family: Lato, sans-serif;
+  font-family: "Lato", sans-serif;
 }
+
 .page__header {
   margin: 0 auto;
 }
+
 .header {
-  width: 500px;
+  max-width: 500px;
   text-align: right;
 }
+
 .header__img {
   width: 100%;
 }
+
 .header__link {
-  font-family: fantasy, cursive;
+  font-family: "fantasy", cursive;
 }
 
 @media (max-width:768px) {
@@ -37,13 +45,16 @@ button{
   }
 
 }
+
 .page__content {
   margin: 0 auto 0;
 }
+
 .todo-app {
-  width: 500px;
+  max-width: 500px;
   padding-top: 1em;
 }
+
 .tasks-section__header {
   color: #333;
   font-weight: 700;
@@ -53,29 +64,35 @@ button{
   margin: 0;
   text-transform: uppercase;
 }
+
 .tasks-section__add-form {
   padding: 20px 0 1em;
 }
-.task__label {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-.add-task-form {
-  display: flex;
-}
+
 .button {
   background: none;
   border: 0px;
   color: #888;
   font-size: 15px;
   width: 60px;
-  font-family: Lato, sans-serif;
+  font-family: "Lato", sans-serif;
   cursor: pointer;
 }
+
 .button:hover {
   color: #3a3a3a;
 }
+
+.button--delete .delete-icon {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.button--delete .delete-icon:hover {
+  transform: rotateZ(0);
+}
+
 .text-input {
   margin: 0;
   font-size: 18px;
@@ -85,20 +102,25 @@ button{
   border: 1px solid #ddd;
   background: #fff;
   border-radius: 6px;
-  font-family: Lato, sans-serif;
+  font-family: "Lato", sans-serif;
   color: #888;
   flex-grow: 1;
 }
+
 .text-input:focus {
   color: #333;
 }
 
-/* New Task */
+/* Add task form */
+.add-task-form {
+  display: flex;
+}
+
 .add-task-form__input {
   width: 318px;
 }
 
-/* Task list */
+/* Task */
 .task {
   overflow: hidden;
   padding: 20px 0;
@@ -108,25 +130,26 @@ button{
   justify-content: space-between;
   align-items: center;
 }
+
+.task__label {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
 .task > .task__checker {
   margin: 0 10px;
 }
+
 .task > .task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
+
 .task > .task__input {
   width: 226px;
-}
-.button--delete .delete-icon {
-  height: 2em;
-  transform: rotateZ(45deg);
-  transition: transform 200ms ease-in;
-}
-.button--delete .delete-icon:hover {
-  transform: rotateZ(0);
 }
 
 /* Completed */
